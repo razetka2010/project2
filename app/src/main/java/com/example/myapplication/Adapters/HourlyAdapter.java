@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.Domains.Hourly;
 import com.example.myapplication.R;
 
+import java.time.Instant;
 import java.util.ArrayList;
 
 public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.ViewHolder> {
@@ -41,7 +42,7 @@ Context context;
 
         Glide.with(context)
                 .load(drawableResourceId)
-                .intro(holder.pic);
+                .into(holder.pic);
     }
 
     @Override
