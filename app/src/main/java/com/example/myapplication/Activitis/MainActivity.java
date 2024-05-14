@@ -1,6 +1,9 @@
 package com.example.myapplication.Activitis;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,7 +29,13 @@ private RecyclerView recyclerView;
         setContentView(R.layout.activity_main);
 
         initRecyclerView();
+        setVariable();
         
+    }
+
+    private void setVariable() {
+        TextView next7dayBtn = findViewById(R.id.nextBtn);
+        next7dayBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this,TommorowActiviti.class)));
     }
 
     private void initRecyclerView() {

@@ -35,19 +35,17 @@ Context context;
     @Override
     public void onBindViewHolder(@NonNull HourlyAdapter.ViewHolder holder, int position) {
         holder.hourTxt.setText(items.get(position).getHour());
-        holder.tempTxt.setText(items.get(position).getTemp());
+        holder.tempTxt.setText(items.get(position).getTemp()+"°");
 
         int drawableResourceId = holder.itemView.getResources()
                 .getIdentifier(items.get(position).getPicPath(),"drawable",holder.itemView.getContext().getPackageCodePath());
 
-        Glide.with(context)
-                .load(drawableResourceId)
-                .into(holder.pic);
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return items.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView hourTxt, tempTxt;
