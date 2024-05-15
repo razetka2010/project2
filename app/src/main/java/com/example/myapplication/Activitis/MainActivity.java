@@ -42,11 +42,10 @@ private RecyclerView recyclerView;
 
         ArrayList<Hourly> items = new ArrayList<>();
 
-        items.add(new Hourly("10 pm", 28, "cloudy"));
-        items.add(new Hourly("11 pm", 29, "sun"));
-        items.add(new Hourly("12 pm", 30, "wind"));
-        items.add(new Hourly("11 pm", 29, "rainy"));
-        items.add(new Hourly("12 pm", 27, "storm"));
+        items.add(new Hourly("Ночь", +1, "rainy"));
+        items.add(new Hourly("Утро", +2, "rainy"));
+        items.add(new Hourly("День", +2, "snowy"));
+        items.add(new Hourly("Вечер", +2, "cloudy"));
 
         recyclerView = findViewById(R.id.view1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
